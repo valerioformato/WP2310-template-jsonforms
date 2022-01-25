@@ -73,7 +73,7 @@ const App = () => {
     <Fragment>
       <div className='App'>
         <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
+          {/* <img src={logo} className='App-logo' alt='logo' /> */}
           <h1 className='App-title'>
             Welcome to the Aspis/CAESAR metadata template form
           </h1>
@@ -92,6 +92,21 @@ const App = () => {
       >
         <Grid item sm={6}>
           <Typography variant={'h4'} className={classes.title}>
+            Rendered form
+          </Typography>
+          <div className={classes.demoform}>
+            <JsonForms
+              schema={schema}
+              uischema={uischema}
+              data={data}
+              renderers={renderers}
+              cells={materialCells}
+              onChange={({ errors, data }) => setData(data)}
+            />
+          </div>
+        </Grid>
+        <Grid item sm={6}>
+          <Typography variant={'h4'} className={classes.title}>
             Bound data
           </Typography>
           <p style={tempStyle}>(Temporarily enabled for debugging purposes)</p>
@@ -106,21 +121,6 @@ const App = () => {
           >
             Clear data
           </Button>
-        </Grid>
-        <Grid item sm={6}>
-          <Typography variant={'h4'} className={classes.title}>
-            Rendered form
-          </Typography>
-          <div className={classes.demoform}>
-            <JsonForms
-              schema={schema}
-              uischema={uischema}
-              data={data}
-              renderers={renderers}
-              cells={materialCells}
-              onChange={({ errors, data }) => setData(data)}
-            />
-          </div>
         </Grid>
       </Grid>
     </Fragment>
