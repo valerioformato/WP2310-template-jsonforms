@@ -15,6 +15,8 @@ import RatingControl from './RatingControl';
 import ratingControlTester from './ratingControlTester';
 import { makeStyles } from '@mui/styles';
 
+import CSS from 'csstype';
+
 const useStyles = makeStyles({
   container: {
     padding: '1em',
@@ -42,7 +44,7 @@ const useStyles = makeStyles({
 });
 
 const initialData = {
-  name: 'Send email to Adrian',
+  name: 'Send email to Adriana',
   description: 'Confirm if you have passed the subject\nHereby ...',
   done: true,
   recurrence: 'Daily',
@@ -54,6 +56,9 @@ const renderers = [
   //register custom renderers
   { tester: ratingControlTester, renderer: RatingControl },
 ];
+
+// TODO: to be removed later [VF]
+const tempStyle: CSS.Properties = { textAlign: 'center' };
 
 const App = () => {
   const classes = useStyles();
@@ -69,8 +74,13 @@ const App = () => {
       <div className='App'>
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
-          <h1 className='App-title'>Welcome to JSON Forms with React</h1>
-          <p className='App-intro'>More Forms. Less Code.</p>
+          <h1 className='App-title'>
+            Welcome to the Aspis/CAESAR metadata template form
+          </h1>
+          <p className='App-intro'>
+            Please fill the form with all the relevant information regarding
+            your products.
+          </p>
         </header>
       </div>
 
@@ -84,6 +94,7 @@ const App = () => {
           <Typography variant={'h4'} className={classes.title}>
             Bound data
           </Typography>
+          <p style={tempStyle}>(Temporarily enabled for debugging purposes)</p>
           <div className={classes.dataContent}>
             <pre id='boundData'>{stringifiedData}</pre>
           </div>

@@ -6,7 +6,7 @@
       "minLength": 1
     },
     "description": {
-      "title": "Long Description",
+      "title": "This is a Long Description",
       "type": "string"
     },
     "done": {
