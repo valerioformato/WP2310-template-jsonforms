@@ -3,7 +3,7 @@ import { JsonForms } from '@jsonforms/react';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import logo from './logo.svg';
+import logo from './CAESAR_logo_fullsize_lightcolor.png';
 import './App.css';
 import schema from './schema.json';
 import uischema from './uischema.json';
@@ -73,7 +73,7 @@ const App = () => {
     <Fragment>
       <div className='App'>
         <header className='App-header'>
-          {/* <img src={logo} className='App-logo' alt='logo' /> */}
+          <img src={logo} className='App-logo' alt='logo' />
           <h1 className='App-title'>
             Welcome to the Aspis/CAESAR metadata template form
           </h1>
