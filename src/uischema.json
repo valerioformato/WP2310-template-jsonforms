@@ -2,54 +2,50 @@
   "type": "VerticalLayout",
   "elements": [
     {
-      "type": "Control",
-      "label": "Completed",
-      "scope": "#/properties/done"
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/name"
-    },
-    {
-      "type": "HorizontalLayout",
+      "type": "Group",
+      "label": "Product",
       "elements": [
         {
           "type": "Control",
-          "scope": "#/properties/due_date"
+          "scope": "#/properties/product/properties/title",
+          "label": "Title"
         },
         {
           "type": "Control",
-          "scope": "#/properties/rating"
-        }
-      ]
-    },
-    {
-      "type": "HorizontalLayout",
-      "elements": [
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence"
+          "scope": "#/properties/product/properties/shortname",
+          "label": "Short name"
         },
         {
           "type": "Control",
-          "scope": "#/properties/recurrence_interval",
-          "rule": {
-            "effect": "HIDE",
-            "condition": {
-              "type": "LEAF",
-              "scope": "#/properties/recurrence",
-              "expectedValue": "Never"
+          "scope": "#/properties/product/properties/identifier",
+          "label": "Unique identifier"
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/product/properties/altidentifier",
+          "label": "Alternative identifiers"
+        },
+        {
+          "type": "HorizontalLayout",
+          "elements": [
+            {
+              "type": "Control",
+              "scope": "#/properties/product/properties/created",
+              "label": "Created on"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/product/properties/updated",
+              "label": "Updated on"
             }
-          }
+          ]
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/product/properties/status",
+          "label": "Status"
         }
       ]
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/description",
-      "options": {
-        "multi": true
-      }
     }
   ]
 }

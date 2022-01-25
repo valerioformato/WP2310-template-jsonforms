@@ -44,11 +44,11 @@ const useStyles = makeStyles({
 });
 
 const initialData = {
-  name: 'Send email to Adriana',
-  description: 'Confirm if you have passed the subject\nHereby ...',
-  done: true,
-  recurrence: 'Daily',
-  rating: 3,
+  product: {
+    title: 'My Title',
+    shortname: 'My Shortname',
+  },
+  template: { version: 1 },
 };
 
 const renderers = [
