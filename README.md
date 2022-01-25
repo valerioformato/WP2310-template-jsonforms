@@ -2,13 +2,16 @@
 
 ## Setup
 
-- Clonare il repo con la nostra app
-  `git clone git@github.com:eclipsesource/jsonforms-react-seed.git`
+- Clonare questo repo
+  `git clone https://github.com/valerioformato/WP2310-template-jsonforms.git`
 - Startare un docker container con la corretta versione di NodeJS
-  `docker run -it -p 3000:3000 --mount type=bind,source=$PWD/jsonforms-react-seed,target=/app node:14.18 /bin/bash` - All'interno del container eseguire
+  `docker run -it -p 3000:3000 --mount type=bind,source=$PWD/WP2310-template-jsonforms,target=/app node:14.18 /bin/bash` - All'interno del container eseguire
   `npm ci && npm start`
   n.b: La prima volta puo' richiedere decine di minuti.
 - Aprire un browser e puntarlo a `http://localhost:3000`. Dovreste vedere la pagina di esempio.
+
+## Using VSCode
+Il repo contiene gia' la configurazione per poter aprire il progetto in [Visual Studio Code](https://code.visualstudio.com) tramite l'estensione "Dev Container".
 
 ## Working on it
 
